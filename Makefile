@@ -22,7 +22,7 @@ terminal:
 	docker-compose run app /bin/bash
 
 test:
-	docker-compose run -rm app bundle exec rspec $(spec)
+	docker-compose run --rm app bundle exec rspec $(spec)
 
 stop:
 	docker-compose down
