@@ -1,0 +1,27 @@
+services:
+  postgres:
+    image: postgres:13-alpine
+    command: ["postgres", "-c", "fsync=false", "-c", "full_page_writes=off"]
+    environment:
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+  app:
+    container_name: app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: foreman start -f Procfile.development
+    ports:
+      - "3000:5000"
+    volumes:
+      - .:/app
+    depends_on:
+      - postgres
+      - redis
