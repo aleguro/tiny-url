@@ -39,5 +39,8 @@
 yarn-debug.log*
 .yarn-integrity
 
-/coverage/*
+coverage/*
+coverage/.last_run.json
+coverage/.resultset.json
 /config/credentials/development.key
+.DS_Store
