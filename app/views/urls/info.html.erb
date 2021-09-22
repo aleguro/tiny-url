@@ -1,0 +1,9 @@
+<h1>URL information</h1>
+
+<div>Long url: <%= @url.url %></div>
+<br>
+<div>Short url: <%= @url.short_url %></div>
+<br>
+<div>Unique visits: <%= @url.visits.length %></div>
+<br>
+<div>Total visits: <%= @url.visits.pluck(:recurring_visits).inject(:+) %></div>

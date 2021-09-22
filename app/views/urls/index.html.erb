@@ -1,0 +1,14 @@
+<h1>Available URLs </h1>
+
+<ul>
+	<% @urls.each do |url| %>
+		<li> <%= link_to url.url, redirect_url(url.short_url), target: "_blank" %>, <%= link_to 'Info', info_url(url.short_url) %> </li>
+	<% end %>
+</ul>
+
+<%= form_with model: @url, url:'/urls' do |form| %>
+  <%= render 'shared/error_messages', object: form.object %>
+ 	<%= form.label :url, "New url:" %>
+  <%= form.text_field :url, placeholder: "https://site.com" %>
+  <%= form.submit "Create" %>
+<% end %>
