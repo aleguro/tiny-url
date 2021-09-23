@@ -38,6 +38,7 @@ $ make init
 
 $ make start
 
+- Then you can visit the app in [http://localhost:3000/]
 
 ## Usage
 

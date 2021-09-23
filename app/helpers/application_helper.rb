@@ -1,4 +1,5 @@
 module ApplicationHelper
+
 	def redirect_url(url)
 		"#{host}urls/#{url}"
 	end
@@ -8,6 +9,6 @@ module ApplicationHelper
 	end
 
   def host
-    Rails.application.credentials[:host]
+    ""
   end
 end
