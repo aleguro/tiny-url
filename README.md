@@ -1,24 +1,60 @@
-# README
+# Tiny URL
+> This is a tiny url app
+> Live demo [https://ag-tiny-url.herokuapp.com/](https://ag-tiny-url.herokuapp.com/). 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table of Contents
+* [Dependencies](#Dependencies)
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Setup](#setup)
+* [Usage](#usage)
+* [Project Status](#project-status)
+* [Contact](#contact)
 
-Things you may want to cover:
 
-* Ruby version
+## Dependencies
+- Docker
+- Heroku toolbelt
 
-* System dependencies
 
-* Configuration
+## Technologies Used
+- Ruby 3.0
+- Ruby on rails 6.1
+- Docker
+- Postgres
+- Redis
 
-* Database creation
 
-* Database initialization
+## Features
+- List existing urls
+- Visit urls clicking on the short version
+- Add a new short url
+- Get information of an url and its visits
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Setup
 
-* Deployment instructions
+$ make init
+$ make start
 
-* ...
+
+## Usage
+
+There are other several commands to aid on development task, such as
+
+- make console (enter rails console)
+- make bundle (install new gems)
+- make migration migration=createNewTable (creates a schema change)
+- make migrate (migrate new schema changes)
+- make test (run the test suite)
+- make stop (stop the server)
+
+
+## Project Status
+
+The project include code coverage, that can be examined by clicking on the html file generated after each test (coverage/index.html)
+
+## Contact
+Created by [@aleguro](https://www.linkedin.com/in/alejandrogurovich/) - feel free to contact me!
+
+

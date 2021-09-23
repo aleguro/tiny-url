@@ -1,7 +1,7 @@
  init:
 	docker-compose build app 
 	make start
-	docker-compose run app bundle exec rake db:drop db:create db:migrate
+	docker-compose run --rm app bundle exec rake db:drop db:create db:migrate
 
 bundle:
 	docker-compose run --rm -v $(PWD):/app app bundle install
