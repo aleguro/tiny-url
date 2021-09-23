@@ -1,3 +1,5 @@
+# General module to create a short version of any kind of string
+# => configurable by a DSL called shortify 
 module Shortable
   extend ActiveSupport::Concern
 
@@ -13,6 +15,7 @@ module Shortable
 
     attr_accessor :field
 
+    # Maps to shortify a class instance attribute setting the value in another attribute
     def shortify(regular_attribute:, shorter_attribute:)
       @field = { regular: regular_attribute, shorter: shorter_attribute }
     end

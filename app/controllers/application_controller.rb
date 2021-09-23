@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
 	before_action :set_current_user
 
+ 	# Returns the signed in ? user.
 	def current_user
 		@user
 	end
